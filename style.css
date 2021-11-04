@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca&display=swap");
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  --card1-color: hsl(31, 77%, 52%);
+  --card2-color: hsl(184, 100%, 22%);
+  --card3-color: hsl(179, 100%, 13%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 10vh auto;
+  width: 80%;
+  grid-template-areas: "card1 card2 card3";
+}
+
+.cards {
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 40px;
+}
+
+.card1 {
+  background-color: var(--card1-color);
+}
+
+.card2 {
+  background-color: var(--card2-color);
+}
+
+.card3 {
+  background-color: var(--card3-color);
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
+  border: 1px white solid;
+  border-radius: 16px;
+  width: 160px;
+  height: 40px;
+}
+
+.card1 button:hover,
+.card2 button:hover,
+.card3 button:hover {
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.card1 button {
+  color: var(--card1-color);
+}
+
+.card2 button {
+  color: var(--card2-color);
+}
+
+.card3 button {
+  color: var(--card3-color);
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3";
+  }
+}
